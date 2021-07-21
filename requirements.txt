@@ -1,0 +1,17 @@
+pre-commit
+numpy==1.21.0
+pandas==1.2.5
+jupyter
+matplotlib
+
+scipy
+pmdarima
+statsmodels
+holidays
+xgboost
+prophet
+shap
+
+category_encoders
+seaborn
+requests

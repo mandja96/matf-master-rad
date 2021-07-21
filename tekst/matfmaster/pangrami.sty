@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pangrami}[2015/10/01 v.1.0 Pangrami na srpskom jeziku]
+\RequirePackage{iflang}
+\newif\ifpangrami@latinica
+\DeclareOption{latinica}{\pangrami@latinicatrue}
+\ProcessOptions\relax
+
+\newcommand{\pangrami@srlat}{%
+Predviđanje potražnje (\textit{eng.} demand forecasting) predstavlja izazovan i veoma zastupljen problem u svakodnevnom industrijskom i biznis svetu. Glavni ishod dobrog predviđanja potražnje je optimalna ušteda resursa, a samim tim i povećanje doprinosa na razne načine. Cilj ovog rada je predviđanje potražnje automobilskih delova nad realnim podacima prikupljenim iz jedne kompanije u Švedskoj. Podaci predstavljaju ograničene informacije vezane za rezervacije popravki automobila raznih marki na različitim lokacijama, dobijene isključivo putem zakazivanja preko interneta. Rad analizira prikupljene podatke na nekoliko načina. Prva analiza posmatra podatke predstavljene u vidu vremenske serije, istraživajući dnevni i nedeljni slučaj kroz tri metode: Arima, Prophet i XGBoost. Druga analiza se bavi istraživanjem svih prikupljenih podataka, odvajanjem bitnih atributa, njihovim enkodiranjem i regresionim problemom predviđanja broja rezervacija nad nekoliko nivoa granularnosti podataka.
+
+}
+
+\newcommand{\pangrami@srcir}{%
+}
+
+\newcommand{\pangrami@en}{%
+The quick brown fox jumps over the lazy dog.
+Jim quickly realized that the beautiful gowns are expensive. 
+Quirky spud boys can jam after zapping five worthy Polysixes.
+Fix problem quickly with galvanized jets.
+Quizzical twins proved my hijack-bug fix. 
+Waxy and quivering, jocks fumble the pizza.
+Heavy boxes perform quick waltzes and jigs.
+Pack my red box with five dozen quality jugs.
+Jacky can now give six big tips from the old quiz.
+Lovak won the squad prize cup for sixty big jumps.
+Cozy lummox gives smart squid who asks for job pen.
+By Jove, my quick study of lexicography won a prize.
+Levi Lentz packed my bag with six quarts of juice. 
+Painful zombies quickly watch a jinxed graveyard. 
+Fax back Jim’s Gwyneth Paltrow video quiz.
+Six big devils from Japan quickly forgot how to waltz.
+Grumpy wizards make a toxic brew for the jovial queen.
+Sixty zips were quickly picked from the woven jute bag.
+Foxy parsons quiz and cajole the lovably dim wiki-girl.
+Cute, kind, jovial, foxy physique, amazing beauty? Wowser!
+Jump by vow of quick, lazy strength in Oxford.
+Mr.~Jock, TV quiz PhD, bags few lynx.
+}
+
+\newcommand{\pangrami}{%
+\IfLanguageName{serbianc}{%
+\pangrami@srcir%
+}{%
+\IfLanguageName{serbian}{%
+\ifpangrami@latinica%
+\pangrami@srlat%
+\else%
+\pangrami@srcir%
+\fi
+}{%
+\pangrami@en
+}
+}
+}
